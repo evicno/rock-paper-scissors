@@ -76,5 +76,14 @@ let humanSelection = "";
 let computerSelection = "";
 playGame();
 console.log("Final score :", humanScore, " for you, ", computerScore, " for the computer");
+if (humanScore > computerScore) {
+    console.log("You win!");
+}
+else if (humanScore < computerScore) {
+    console.log("You lose!");
+}
+else {
+    console.log("Tie game!");
+}
 
 
