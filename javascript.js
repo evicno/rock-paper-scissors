@@ -54,12 +54,27 @@ function playRound(humanChoice, computerChoice) {
 }
 }
 
-humanScore = 0;
-computerScore = 0;
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-console.log(humanSelection);
-console.log(computerSelection);
-playRound(humanSelection, computerSelection);
-console.log(humanScore);
-console.log(computerScore);
+function playGame() {
+    humanScore = 0;
+    computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
+        console.log("Your choice: " + humanSelection);
+        console.log("Computer's choice: " + computerSelection);
+        playRound(humanSelection, computerSelection);
+        console.log("Your score: ", humanScore);
+        console.log("Computer's score: ", computerScore);
+
+    }
+    
+
+}
+
+
+let humanSelection = "";
+let computerSelection = "";
+playGame();
+console.log("Final score :", humanScore, " for you, ", computerScore, " for the computer");
+
+
