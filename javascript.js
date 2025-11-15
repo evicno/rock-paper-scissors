@@ -32,9 +32,17 @@ function playRound(humanChoice, computerChoice) {
             console.log("You win! Rock beats Scissors.");
         }
     }
-    else {
-        console.log("not done yet");
+    else if (humanChoice === "paper") {
+        if (computerChoice === "rock") {
+            humanScore ++;
+            console.log("You win! Paper beats Rock.");
+        }
+        else {
+            computerScore ++;
+            console.log("You lose! Scissors beat Paper.");
+        }
     }
+    
 }
 
 humanScore = 0;
@@ -44,3 +52,6 @@ const computerSelection = getComputerChoice();
 console.log(humanSelection);
 console.log(computerSelection);
 playRound(humanSelection, computerSelection);
+console.log(humanScore);
+console.log(computerScore);
+
