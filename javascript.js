@@ -12,3 +12,9 @@ function getComputerChoice (){
             break;    
     }
 }
+
+function getHumanChoice() {
+    let humanChoice = window.prompt("Rock, paper or scissors? ");
+    console.log(humanChoice);
+}
+
