@@ -15,6 +15,32 @@ function getComputerChoice (){
 
 function getHumanChoice() {
     let humanChoice = window.prompt("Rock, paper or scissors? ");
-    console.log(humanChoice);
+    return humanChoice.toLowerCase();
 }
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("Tie! Play again.");
+    }
+    else if (humanChoice === "rock") {
+        if (computerChoice === "paper") {
+            computerScore ++;
+            console.log("You lose! Paper beats Rock.");
+        }
+        else {
+            humanScore ++;
+            console.log("You win! Rock beats Scissors.");
+        }
+    }
+    else {
+        console.log("not done yet");
+    }
+}
+
+humanScore = 0;
+computerScore = 0;
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+console.log(humanSelection);
+console.log(computerSelection);
+playRound(humanSelection, computerSelection);
