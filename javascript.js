@@ -77,6 +77,8 @@ buttons.forEach((button) => {
         playRound(button.id, getComputerChoice());
         if (humanScore == 5 || computerScore == 5) {
             displayWinner();
+            roundResult.textContent = "";
+            // add button "Play again" and clear results
         }  
     })
 })

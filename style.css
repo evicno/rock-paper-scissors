@@ -1,10 +1,17 @@
 body {
-    background-color: rgb(248, 240, 180);
-   
+    background-color: #FFF1CB;
+    font-family: "Hanalei Fill";
 }
 
+.hanalei-fill-regular {
+  font-family: "Hanalei Fill", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .buttons {
-    height: 350px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,9 +19,17 @@ body {
 }
 
 button {
-    font-size: 30px;
-    background-color: rgb(190, 165, 234);
+    font-family: "Hanalei Fill";
+    font-size: 40px;
+    background-color: #FF8F8F;
     border-radius: 40px;
     padding: 40px 20px;
     width: 220px;
+}
+
+.results {
+    height: 80px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
 }
