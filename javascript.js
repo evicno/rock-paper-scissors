@@ -57,16 +57,7 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     humanScore = 0;
     computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        humanSelection = getHumanChoice();
-        computerSelection = getComputerChoice();
-        console.log("Your choice: " + humanSelection);
-        console.log("Computer's choice: " + computerSelection);
-        playRound(humanSelection, computerSelection);
-        console.log("Your score: ", humanScore);
-        console.log("Computer's score: ", computerScore);
 
-    }
     
 
 }
@@ -74,6 +65,13 @@ function playGame() {
 
 let humanSelection = "";
 let computerSelection = "";
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", ()=> {
+        console.log(button.id);
+        playRound(button.id, getComputerChoice());
+    })
+})
 playGame();
 console.log("Final score :", humanScore, " for you, ", computerScore, " for the computer");
 if (humanScore > computerScore) {
