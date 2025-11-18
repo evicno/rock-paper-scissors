@@ -39,7 +39,7 @@ function playRound(humanChoice, computerChoice) {
         }
         else { // computerChoice == "scissors"
             computerScore ++;
-            roundResult.textContent = "You lose! Scissors beat Paper.";
+            roundResult.textContent = "You lose! Scissors beats Paper.";
         }
     }
     else { // humanChoice === "scissors"
