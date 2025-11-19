@@ -23,9 +23,12 @@ body {
 
 #count {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    font-size: 30px;
+    margin: 0 30px;
 }
 
 
@@ -53,6 +56,7 @@ button {
     font-size: 40px;
     font-weight: 300;
 }
- #round_result {
-    margin: 0;
+ #round_result, #score {
+    margin-block-start: 0;
+    margin-block-end: 0;
  }

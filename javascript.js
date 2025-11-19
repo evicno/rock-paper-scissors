@@ -55,14 +55,16 @@ function playRound(humanChoice, computerChoice) {
 humanCount.textContent = `Your score: ${humanScore}`;
 computerCount.textContent = `Computer's score: ${computerScore}`;
 ready.textContent = "";
-liveScore.appendChild(humanCount);
-liveScore.appendChild(computerCount);
+count.appendChild(humanCount);
+count.appendChild(computerCount);
 }
 
 function displayWinner() {
     const score = document.querySelector("#score");
     score.textContent = "Final score : " + humanScore + " for you, " + computerScore + " for the computer";
     const result = document.createElement("p");
+    result.style.fontSize = "60px";
+    result.style.color = "#FF8F8F"
     score.appendChild(result);
     if (humanScore > computerScore) {
         result.textContent = "You win!";
