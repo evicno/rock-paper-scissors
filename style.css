@@ -9,6 +9,26 @@ body {
   font-style: normal;
 }
 
+.live_score {
+    height: 80px;
+    gap: 100px;
+}
+
+.live_score p {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+#count {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+
 
 .buttons {
     height: 300px;
@@ -33,3 +53,6 @@ button {
     font-size: 40px;
     font-weight: 300;
 }
+ #round_result {
+    margin: 0;
+ }

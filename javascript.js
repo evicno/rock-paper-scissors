@@ -51,7 +51,12 @@ function playRound(humanChoice, computerChoice) {
             computerScore ++;
             roundResult.textContent = "You lose! Rock beats Scissors.";
         }
-}
+    }
+humanCount.textContent = `Your score: ${humanScore}`;
+computerCount.textContent = `Computer's score: ${computerScore}`;
+ready.textContent = "";
+liveScore.appendChild(humanCount);
+liveScore.appendChild(computerCount);
 }
 
 function displayWinner() {
@@ -70,12 +75,14 @@ function displayWinner() {
     newGame.textContent = "Play again?";
     score.appendChild(newGame);
     newGame.addEventListener("click", () => {
-    roundResult.textContent = "";
-    score.textContent = "";
-    result.textContent = "";
-    humanScore = 0;
-    computerScore = 0;
-
+        roundResult.textContent = "";
+        score.textContent = "";
+        result.textContent = "";
+        humanScore = 0;
+        computerScore = 0;
+        ready.textContent = "Ready to play? First to 5!"
+        humanCount.textContent = "";
+        computerCount.textContent = "";
     
 })
 
@@ -85,9 +92,13 @@ let humanScore = 0;
 let computerScore = 0;
 const buttons = document.querySelectorAll("button");
 const roundResult = document.querySelector("#round_result");
+const liveScore = document.querySelector(".live_score")
+const ready = document.querySelector("#ready");
+const humanCount = document.createElement("div")
+const computerCount = document.createElement("div");
+
 buttons.forEach((button) => {
     button.addEventListener("click", ()=> {  
-        console.log(button.id);
         playRound(button.id, getComputerChoice());
         if (humanScore == 5 || computerScore == 5) {
             displayWinner();
@@ -101,6 +112,5 @@ buttons.forEach((button) => {
 
 
     
-    
-
+ 
 
