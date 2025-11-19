@@ -65,6 +65,9 @@ function displayWinner() {
     else {
         result.textContent = "You lose!";
     }
+    const newGame = document.createElement("button");
+    score.appendChild(newGame);
+    newGame.textContent = "Play again?";
 }
 
 let humanScore = 0;
@@ -77,8 +80,9 @@ buttons.forEach((button) => {
         playRound(button.id, getComputerChoice());
         if (humanScore == 5 || computerScore == 5) {
             displayWinner();
-            roundResult.textContent = "";
             // add button "Play again" and clear results
+            
+            
         }  
     })
 })
