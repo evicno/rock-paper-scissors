@@ -66,8 +66,19 @@ function displayWinner() {
         result.textContent = "You lose!";
     }
     const newGame = document.createElement("button");
-    score.appendChild(newGame);
+    newGame.style.backgroundColor = "#B7A3E3"
     newGame.textContent = "Play again?";
+    score.appendChild(newGame);
+    newGame.addEventListener("click", () => {
+    roundResult.textContent = "";
+    score.textContent = "";
+    result.textContent = "";
+    humanScore = 0;
+    computerScore = 0;
+
+    
+})
+
 }
 
 let humanScore = 0;
